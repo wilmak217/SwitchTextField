@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="textFieldsChallengeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter a Zip Code" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p0b-dG-l0u">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="LZQ-JD-CHr"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQl-t2-Eiy">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="qfu-3K-FqD"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Turn switch on to edit text" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7NS-1h-kJ5">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="jrl-cd-YQY"/>
+                                </connections>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Za4-ya-gSV">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onOffSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="dys-2q-sqy"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40959087172368425" green="0.40799753287368429" blue="0.40627569901315758" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="p0b-dG-l0u" secondAttribute="trailing" constant="34" id="6My-Ny-fwR"/>
+                            <constraint firstItem="p0b-dG-l0u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="34" id="9hj-rt-sg2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Za4-ya-gSV" secondAttribute="trailing" constant="34" id="AvY-x8-BPB"/>
+                            <constraint firstItem="p0b-dG-l0u" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="B6g-Ah-POA"/>
+                            <constraint firstItem="Za4-ya-gSV" firstAttribute="leading" secondItem="7NS-1h-kJ5" secondAttribute="trailing" constant="51" id="BEj-ge-JnN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7NS-1h-kJ5" secondAttribute="trailing" constant="134" id="DDa-l2-13r"/>
+                            <constraint firstItem="BQl-t2-Eiy" firstAttribute="top" secondItem="p0b-dG-l0u" secondAttribute="bottom" constant="26" id="EGn-wJ-c3f"/>
+                            <constraint firstItem="BQl-t2-Eiy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="34" id="FoC-hG-Jux"/>
+                            <constraint firstItem="7NS-1h-kJ5" firstAttribute="top" secondItem="BQl-t2-Eiy" secondAttribute="bottom" constant="31" id="Iov-UA-BbN"/>
+                            <constraint firstItem="7NS-1h-kJ5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="34" id="QGc-6a-wrM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BQl-t2-Eiy" secondAttribute="trailing" constant="34" id="lmK-IL-U12"/>
+                            <constraint firstItem="Za4-ya-gSV" firstAttribute="top" secondItem="BQl-t2-Eiy" secondAttribute="bottom" constant="30" id="vIk-Ac-Hx0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="p0b-dG-l0u"/>
+                                <exclude reference="BQl-t2-Eiy"/>
+                                <exclude reference="7NS-1h-kJ5"/>
+                                <exclude reference="Za4-ya-gSV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DDa-l2-13r"/>
+                                <exclude reference="Iov-UA-BbN"/>
+                                <exclude reference="QGc-6a-wrM"/>
+                                <exclude reference="EGn-wJ-c3f"/>
+                                <exclude reference="FoC-hG-Jux"/>
+                                <exclude reference="lmK-IL-U12"/>
+                                <exclude reference="6My-Ny-fwR"/>
+                                <exclude reference="9hj-rt-sg2"/>
+                                <exclude reference="B6g-Ah-POA"/>
+                                <exclude reference="AvY-x8-BPB"/>
+                                <exclude reference="BEj-ge-JnN"/>
+                                <exclude reference="vIk-Ac-Hx0"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="p0b-dG-l0u"/>
+                                <include reference="BQl-t2-Eiy"/>
+                                <include reference="7NS-1h-kJ5"/>
+                                <include reference="Za4-ya-gSV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="DDa-l2-13r"/>
+                                <include reference="Iov-UA-BbN"/>
+                                <include reference="QGc-6a-wrM"/>
+                                <include reference="EGn-wJ-c3f"/>
+                                <include reference="FoC-hG-Jux"/>
+                                <include reference="lmK-IL-U12"/>
+                                <include reference="6My-Ny-fwR"/>
+                                <include reference="9hj-rt-sg2"/>
+                                <include reference="B6g-Ah-POA"/>
+                                <include reference="AvY-x8-BPB"/>
+                                <include reference="BEj-ge-JnN"/>
+                                <include reference="vIk-Ac-Hx0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cashField" destination="BQl-t2-Eiy" id="5Ys-wG-YOu"/>
+                        <outlet property="textField" destination="7NS-1h-kJ5" id="bWG-kT-4u6"/>
+                        <outlet property="textSwitch" destination="Za4-ya-gSV" id="4ZV-E0-ec2"/>
+                        <outlet property="zipcodeField" destination="p0b-dG-l0u" id="XuS-PQ-IJy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439.5" y="361"/>
+        </scene>
+    </scenes>
+</document>
